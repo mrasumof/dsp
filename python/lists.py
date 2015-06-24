@@ -15,7 +15,17 @@ def match_ends(words):
     >>> match_ends(['aaa', 'be', 'abc', 'hello'])
     1
     """
-    raise NotImplementedError
+    
+    counter = 0
+    
+    for i in range(len(words)):
+
+        a = words[i]
+
+        if (len(a) >= 2) and (a[0] == a[len(a)-1]):
+            counter = counter + 1
+            
+    print counter
 
 
 def front_x(words):
@@ -32,7 +42,27 @@ def front_x(words):
     >>> front_x(['mix', 'xyz', 'apple', 'xanadu', 'aardvark'])
     ['xanadu', 'xyz', 'aardvark', 'apple', 'mix']
     """
-    raise NotImplementedError
+    xcount = 0
+    ncount = 0
+    xwords = []
+    nwords = []
+    
+    for i in range(len(words)):
+
+        aux = words[i]
+        if aux[0] == "X" or aux[0] == "x":
+            xwords.append(words[i])
+            xcount = xcount + 1
+        else:
+            nwords.append(aux)
+            ncount = ncount + 1
+
+    orderednlist = nwords.sort()
+    orderedxlist = xwords.sort()
+
+    newlist = xwords + nwords
+
+    return newlist
 
 
 def sort_last(tuples):
@@ -49,8 +79,12 @@ def sort_last(tuples):
     >>> sort_last([(1, 7), (1, 3), (3, 4, 5), (2, 2)])
     [(2, 2), (1, 3), (3, 4, 5), (1, 7)]
     """
-    raise NotImplementedError
+    
+    sortedbysecond = tuple()
+    sortedbysecond = sorted(tuples, key=lambda x: x[-1])
 
+    return sortedbysecond
+    
 
 def remove_adjacent(nums):
     """
@@ -68,7 +102,20 @@ def remove_adjacent(nums):
     >>> remove_adjacent([])
     []
     """
-    raise NotImplementedError
+    
+    newlist = []
+
+    if len(nums) > 1:
+
+        first = nums[0]
+        newlist = [nums[0]]
+
+        for i in range(len(nums)-1):
+
+            if (nums[i] != nums[i+1]):
+                newlist.append(nums[i+1])
+
+    return newlist
 
 
 def linear_merge(list1, list2):
@@ -85,4 +132,9 @@ def linear_merge(list1, list2):
     >>> linear_merge(['aa', 'aa'], ['aa', 'bb', 'bb'])
     ['aa', 'aa', 'aa', 'bb', 'bb']
     """
-    raise NotImplementedError
+    
+    newlist = list1 + list2
+
+    newlist.sort()
+
+    return newlist
