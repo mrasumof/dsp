@@ -18,7 +18,7 @@ These exercises are implemented with doctests, which are runnable tests inside d
 
 How are Python lists and tuples similar and different? Which will work as keys in dictionaries? Why?
 
-REPLACE THIS TEXT WITH YOUR RESPONSE
+>>> They are similar because they are used to store data in an organized way. Both lists and tuples are indexed and values are accessed through the position they are in the sequence. Tuples, contrary to lists are immutable, meaning that it is not possible to modify an existing value in the tuple.
 
 ---
 
@@ -36,7 +36,15 @@ REPLACE THIS TEXT WITH YOUR RESPONSE
 
 Describe Python's `lambda`. What is it, and what is it used for? Give at least one example, including an example of using a `lambda` in the `key` argument to `sorted`.
 
-REPLACE THIS TEXT WITH YOUR RESPONSE
+>>> (from a book) a lambda expression introduces a new local scope for the function it creates. Lambdas can see all >>> the variables that live in the functions in which they are coded
+>>> Example: 
+>>> def func():
+>>>     x = 4
+>>>     action = (lambda n: x ** n)
+>>>     return action
+>>> x = func()
+>>> print (x(2))
+>>> This will return the square of 4: 16
 
 ---
 
