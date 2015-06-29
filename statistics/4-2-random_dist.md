@@ -1,5 +1,5 @@
 [Think Stats Chapter 4 Exercise 2](http://greenteapress.com/thinkstats2/html/thinkstats2005.html#toc41) (a random distribution)
-
+```python
 __author__ = 'martinrasumoff'
 
 import matplotlib
@@ -39,3 +39,4 @@ thinkplot.Show(xlabel="Number",ylabel="PMF")
 thinkplot.PrePlot(1)
 thinkplot.Cdf(cdf)
 thinkplot.Show(xlabel="Number",ylabel="CDF")
+```
