@@ -1,5 +1,5 @@
 [Think Stats Chapter 5 Exercise 1](http://greenteapress.com/thinkstats2/html/thinkstats2006.html#toc50) (blue men)
-
+```
 __author__ = 'martinrasumoff'
 
 import matplotlib
@@ -14,3 +14,4 @@ print "\n"
 
 total_men = perc_men_high_end - perc_men_low_end
 print str(total_men * 100) + "%"
+```
