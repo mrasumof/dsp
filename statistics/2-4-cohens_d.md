@@ -1,5 +1,5 @@
 [Think Stats Chapter 2 Exercise 4](http://greenteapress.com/thinkstats2/html/thinkstats2003.html#toc24) (Cohen's d)
-
+```python
 ### Exercise 2.4 ###
 
 import numpy
@@ -54,3 +54,4 @@ pooled_var = (n1 * firsts_var + n2 * others_var) / (n1+n2)
 
 CohenEffectSize = diff/math.sqrt(pooled_var)
 print "\n\nCohen's Effect Size: " + str(CohenEffectSize)
+```
